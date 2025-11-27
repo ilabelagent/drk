@@ -1,0 +1,38 @@
+[
+  {
+    "id": "phishing-keywords",
+    "pattern": "(valid accounts|invalid accounts|visitors by country|copy zip pass|clear all logs|logout)",
+    "description": "Suspicious account/panel keywords",
+    "severity": "high"
+  },
+  {
+    "id": "stealer-layout",
+    "pattern": "(Host/URL:|Username:|Password:|Application:|PC Name:)",
+    "description": "Credential dump table style (Host/URL, Username, Password)",
+    "severity": "critical"
+  },
+  {
+    "id": "dangerous-domain-hints",
+    "pattern": "(mail\\.[a-z0-9\\-]+\\.[a-z]{2,}|smtp\\.|webmail\\.|cpanel|roundcube)",
+    "description": "Mail/webmail/service endpoints in evidence",
+    "severity": "medium"
+  },
+  {
+    "id": "possible-secret-key",
+    "pattern": "([A-Za-z0-9_\\-]{24,})",
+    "description": "Long token-like strings (possible API keys / tokens)",
+    "severity": "high"
+  },
+  {
+    "id": "env-style",
+    "pattern": "([A-Z0-9_]{3,40})=(.+)",
+    "description": "ENV style key=value in dumps",
+    "severity": "high"
+  },
+  {
+    "id": "email-basic",
+    "pattern": "([A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,})",
+    "description": "Email address",
+    "severity": "medium"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "name": "kingdom-dork",
+  "displayName": "Kingdom Dork Tool",
+  "version": "1.0.0",
+  "type": "security:dork-audit",
+  "entry": "kingdom-dork",
+  "ethics": {
+    "allow": [
+      "local file analysis",
+      "OCR extraction from authorized evidence",
+      "dork-pattern detection for security auditing",
+      "redaction of sensitive information in dumps"
+    ],
+    "deny": [
+      "internet-wide dork scanning",
+      "credential harvesting",
+      "attacking external servers",
+      "unauthorized scraping"
+    ]
+  }
+}
